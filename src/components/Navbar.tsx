@@ -10,13 +10,16 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 w-full z-50 bg-white backdrop-blur-lg shadow-md border-b border-teal-200">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 flex justify-between items-center h-16">
-        
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-3 group" onClick={() => setIsMenuOpen(false)}>
+        <Link
+          href="/"
+          className="flex items-center space-x-3 group"
+          onClick={() => setIsMenuOpen(false)}
+        >
           <div className="p-2 bg-white rounded-full shadow-md transition-shadow group-hover:shadow-lg">
-            <motion.img 
-              src="/images/logo.png" 
-              alt="SMAS Logo" 
+            <motion.img
+              src="/images/logo.png"
+              alt="SMAS Logo"
               className="h-10 w-10 transform group-hover:scale-110 transition-transform"
               whileHover={{ rotate: 10 }}
             />
@@ -49,15 +52,27 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-          </svg>
-        </button>
+        {/* Mobile Menu Button (Hide when Menu is Open) */}
+        {!isMenuOpen && (
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        )}
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -73,31 +88,35 @@ export default function Navbar() {
             {/* Close Button */}
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="self-end p-2 text-gray-800 hover:bg-gray-100 rounded-lg"
+              className="self-end p-2 text-gray-800 rounded-lg"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
 
             {/* Mobile Navigation Links */}
-            {["About", "Products", "Farming", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                className="text-lg font-medium text-gray-800 hover:text-teal-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </Link>
-            ))}
-
-            {/* Contact Info */}
-            <div className="mt-auto border-t pt-4">
-              <p className="text-sm text-gray-600">Contact us:</p>
-              <a href="mailto:contact@skandamarine.com" className="text-teal-600 hover:text-teal-700">
-                contact@skandamarine.com
-              </a>
+            <div className="flex flex-col gap-4 bg-white rounded-lg shadow-lg p-4">
+              {["About", "Products", "Farming", "Contact"].map((item) => (
+                <Link
+                  key={item}
+                  href={`/${item.toLowerCase()}`}
+                  className="text-lg font-medium text-gray-800 hover:text-teal-600 transition-colors bg-white px-4 py-2 rounded-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </Link>
+              ))}
             </div>
           </motion.div>
         )}
