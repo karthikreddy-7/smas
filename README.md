@@ -28,44 +28,42 @@ Our vision is to be a global leader in **marine algae cultivation**, utilizing *
 ## Project Structure
 ```
 smas/
-│── public/                   # Static assets (images, icons, etc.)
-│   ├── images/               # Store website images
-│   │   ├── logo.png
-│   │   ├── banner.jpg
-│   │   ├── seaweed.jpg
-│   ├── favicon.ico           # Website favicon
-│
-│── src/                      # Source directory
-│   ├── app/                  # App Router pages
-│   │   ├── layout.tsx        # Main layout file (applies globally)
-│   │   ├── page.tsx          # Homepage
-│   │   ├── about/            # About page
-│   │   │   ├── page.tsx
-│   │   ├── products/         # Valuable products page
-│   │   │   ├── page.tsx
-│   │   ├── farming/          # Farming techniques page
-│   │   │   ├── page.tsx
-│   │   ├── contact/          # Contact page
-│   │   │   ├── page.tsx
-│
-│   ├── components/           # Reusable UI components
-│   │   ├── Navbar.tsx        # Navigation bar
-│   │   ├── Footer.tsx        # Footer section
-│   │   ├── Hero.tsx          # Homepage Hero section
-│   │   ├── Section.tsx       # Reusable section component
-│
-│   ├── styles/               # Global styles
-│   │   ├── globals.css       # Global CSS styles
-│   │   ├── variables.css     # CSS variables for theme settings
-│
-│   ├── constants/            # Static data
-│   │   ├── products.ts       # Product details
-│   │   ├── farming.ts        # Farming techniques data
-│
-│── package.json              # Project dependencies and scripts
-│── next.config.js            # Next.js configuration
-│── tsconfig.json             # TypeScript configuration
-│── README.md                 # Project documentation
+│── README.md
+│── eslint.config.mjs
+│── next-env.d.ts
+│── next.config.ts
+│── package-lock.json
+│── package.json
+│── postcss.config.mjs
+│── public/
+│   │── assets/
+│   │── icons/
+│   └── images/
+│── src/
+│   │── app/
+│   │   │── about/
+│   │   │   └── page.tsx
+│   │   │── contact/
+│   │   │   └── page.tsx
+│   │   │── farming/
+│   │   │   └── page.tsx
+│   │   │── favicon.ico
+│   │   │── layout.tsx
+│   │   │── page.tsx
+│   │   └── products/
+│   │       └── page.tsx
+│   │── components/
+│   │   │── Footer.tsx
+│   │   │── Hero.tsx
+│   │   │── Navbar.tsx
+│   │   │── ProductCard.tsx
+│   │   └── Section.tsx
+│   │── constants/
+│   │   │── farming.ts
+│   │   └── products.ts
+│   └── styles/
+│       └── globals.css
+└── tsconfig.json
 ```
 
 ## Technology Stack
