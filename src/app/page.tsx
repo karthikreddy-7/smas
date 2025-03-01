@@ -1,9 +1,9 @@
 // src/app/page.tsx (Homepage)
-import Hero from '@/components/Hero';
 import ProductCard from '@/components/ProductCard';
 import Section from '@/components/Section';
 import { FARMING_METHODS } from '@/constants/farming';
 import { PRODUCTS } from '@/constants/products';
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -42,7 +42,13 @@ export default function Home() {
             </p>
           </div>
           <div className="animate-float">
-            <img src="/seaweed-farm.jpg" alt="Sustainable Farming" className="rounded-3xl shadow-xl" />
+          <Image 
+  src="/seaweed-farm.jpg" 
+  alt="Sustainable Farming" 
+  width={600} 
+  height={400} 
+  className="rounded-3xl shadow-xl" 
+/>
           </div>
         </div>
       </Section>
@@ -56,11 +62,13 @@ export default function Home() {
               className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <div className="w-full h-48 bg-teal-100 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src={undefined} 
-                  alt={method.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition duration-300"
-                />
+              <Image 
+  src={method.image || "/placeholder.jpg"} 
+  alt={method.title} 
+  width={500} 
+  height={300} 
+  className="w-full h-full object-cover transform group-hover:scale-110 transition duration-300" 
+/>
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-2">{method.title}</h3>
               <p className="text-gray-600">{method.description}</p>

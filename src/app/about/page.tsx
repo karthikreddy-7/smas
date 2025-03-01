@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white text-gray-800">
@@ -27,8 +29,21 @@ export default function About() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 animate-fade-in-left">
-            <img src="/women-farmers.jpg" alt="Women Farmers" className="rounded-xl shadow-lg h-48 object-cover" />
-            <img src="/seaweed-harvest.jpg" alt="Seaweed Harvest" className="rounded-xl shadow-lg h-48 object-cover mt-8" />
+          <Image 
+  src="/women-farmers.jpg" 
+  alt="Women Farmers" 
+  width={400} 
+  height={300} 
+  className="rounded-xl shadow-lg h-48 object-cover" 
+/>
+
+<Image 
+  src="/seaweed-harvest.jpg" 
+  alt="Seaweed Harvest" 
+  width={400} 
+  height={300} 
+  className="rounded-xl shadow-lg h-48 object-cover mt-8" 
+/>
           </div>
         </div>
       </section>
