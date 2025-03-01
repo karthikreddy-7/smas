@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center max-w-screen overflow-hidden">
         <div className="absolute inset-0 bg-[url('/wave-pattern.svg')] opacity-10 animate-float"></div>
         <div className="relative z-10 container text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 animate-fade-in-up">
@@ -22,7 +22,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Grid */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -163,21 +163,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="pb-20">
-        <div className="container mx-auto px-4">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.18117601181!2d78.692888!3d9.3699995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0067597d4824a9%3A0x8d0b5b4ee0a67027!2sRamanathapuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1718727772350!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              className="border-0"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </section>
 
       {/* Social Proof */}
       <section className="py-16 bg-blue-50">

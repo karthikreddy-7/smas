@@ -24,7 +24,8 @@ export default function Navbar() {
               whileHover={{ rotate: 10 }}
             />
           </div>
-          <span className="text-2xl font-bold bg-gradient-to-r from-teal-800 to-green-500 bg-clip-text text-transparent">
+          {/* Hide SMAS on Mobile */}
+          <span className="text-2xl font-bold bg-gradient-to-r from-teal-800 to-green-500 bg-clip-text text-transparent hidden md:inline">
             SMAS
           </span>
         </Link>
@@ -52,14 +53,13 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button (Hide when Menu is Open) */}
-        {!isMenuOpen && (
+        {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(true)}
             className="md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
           >
             <svg
-              className="w-6 h-6"
+              className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -72,18 +72,18 @@ export default function Navbar() {
               />
             </svg>
           </button>
-        )}
       </div>
 
       {/* Mobile Menu Dropdown */}
+
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 flex flex-col p-6 gap-4 md:hidden"
+            className="fixed inset-0 bg-white z-50 flex flex-col md:hidden shadow-lg"
           >
             {/* Close Button */}
             <button
@@ -91,7 +91,7 @@ export default function Navbar() {
               className="self-end p-2 text-gray-800 rounded-lg"
             >
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -106,12 +106,12 @@ export default function Navbar() {
             </button>
 
             {/* Mobile Navigation Links */}
-            <div className="flex flex-col gap-4 bg-white rounded-lg shadow-lg p-4">
+            <div className="flex flex-col">
               {["About", "Products", "Farming", "Contact"].map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}
-                  className="text-lg font-medium text-gray-800 hover:text-teal-600 transition-colors bg-white px-4 py-2 rounded-lg"
+                  className="text-lg font-medium text-gray-800 hover:text-teal-600 transition-colors px-4 py-3 bg-gray-100"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item}

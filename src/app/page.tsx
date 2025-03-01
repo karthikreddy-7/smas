@@ -13,7 +13,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-teal-50 to-white">
-      <Hero />
+      <Hero
+        title="Sustainable Seaweed Solutions"
+        subtitle="Empowering coastal communities through innovative marine agriculture"
+      />
 
       <Mission />
 
