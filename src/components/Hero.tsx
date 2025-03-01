@@ -1,51 +1,70 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function Hero() {
+interface HeroProps {
+  title: string;
+  subtitle: string;
+}
+
+export default function Hero({ title, subtitle }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-blue-50 to-teal-100">
-      {/* Background Waves */}
-      <div className="absolute inset-0 bg-[url('/wave-pattern.svg')] opacity-10 animate-float"></div>
+    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/seaweed-banner.jpg"
+          alt="Seaweed Farming"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-900/80 via-teal-800/70 to-blue-900/80 mix-blend-multiply" />
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6">
-        <h1 className="text-6xl md:text-8xl font-extrabold text-blue-900 leading-tight tracking-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-blue-800">
-            Ocean to Agriculture
-          </span>
-        </h1>
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
+        >
+          {/* Title with Gradient */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-teal-200 via-teal-100 to-blue-200 bg-clip-text text-transparent">
+              {title}
+            </span>
+          </h1>
 
-        <p className="text-xl md:text-2xl text-gray-700 mt-4 opacity-80 max-w-2xl mx-auto">
-          Harnessing Marine Algae for Sustainable Solutions
-        </p>
-
-        <div>
-          <button className="mt-8 px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-green-700 text-white text-lg font-semibold shadow-lg hover:scale-105 transform transition-all duration-300">
-            Explore Our Solutions
-          </button>
-        </div>
+          {/* Subtitle with Animation */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-lg md:text-xl lg:text-2xl text-teal-50 mb-8 leading-relaxed"
+          >
+            {subtitle}
+          </motion.p>
+        </motion.div>
       </div>
 
-      {/* Decorative Image */}
-      <div className="absolute hidden md:block">
-        <Image
-          src="/seaweed-icon.jpg"
-          alt="Seaweed Icon"
-          width={6000}
-          height={6000}
-          className="opacity-40"
-        />
-      </div>
-
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      {/* Wave Overlay - Positioned Higher */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg
+          viewBox="0 0 1440 120"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full transform scale-y-150" // Added scale transform for more pronounced waves
+        >
           <path
-            fill="#e6f7f9"
-            fillOpacity="1"
-            d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,138.7C672,139,768,117,864,138.7C960,160,1056,224,1152,224C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
+            d="M0 30L60 25C120 20 240 10 360 15C480 20 600 40 720 45C840 50 960 40 1080 35C1200 30 1320 30 1380 30L1440 30V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V30Z"
+            fillOpacity="0.9" // Increased opacity slightly
+          />
         </svg>
       </div>
-    </section>
+    </div>
   );
 }
