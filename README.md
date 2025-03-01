@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skanda Marine Algae Solutions (SMAS)
 
-## Getting Started
+## Overview
+**Skanda Marine Algae Solutions (SMAS)** is an initiative dedicated to **sustainable seaweed farming** and **value-added marine products**. Our mission is to empower coastal communities with **innovative farming techniques** and **technologically advanced solutions** for seaweed cultivation.
 
-First, run the development server:
+## Vision
+Our vision is to be a global leader in **marine algae cultivation**, utilizing **cutting-edge technology** to create **high-value products** while promoting **eco-friendly farming practices** and **sustainable livelihoods** for farmers.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Seaweed Farming & Impact
+- **Empowering Coastal Communities:** We work with **local farmers, especially women**, to provide training and resources for seaweed farming.
+- **Sustainable Practices:** We promote farming techniques such as **floating bamboo rafts, longline methods, and tube net cultivation**.
+- **Economic Growth:** We help farmers integrate into the **global supply chain** for seaweed-based **organic fertilizers, food additives, and animal feed supplements**.
+
+## Farming Techniques
+- **Floating Bamboo Raft Method** - Ideal for calm waters.
+- **Longline/Monoline Method** - Used in shallow waters with moderate waves.
+- **Tube Net Method** - Suitable for areas with strong waves.
+
+## Valuable Products
+1. **Organic Manure with Seaweed-Coated Fertilizer** - Enhances soil fertility and crop yield.
+2. **Agar and Carrageenan** - Food stabilizers used in dairy, beverages, and processed foods.
+3. **Animal Feed Supplements** - Rich in essential nutrients, amino acids, and vitamins.
+
+---
+
+# Technical Overview
+
+## Project Structure
+```
+smas/
+│── README.md
+│── eslint.config.mjs
+│── next-env.d.ts
+│── next.config.ts
+│── package-lock.json
+│── package.json
+│── postcss.config.mjs
+│── public/
+│   │── assets/
+│   │── icons/
+│   └── images/
+│── src/
+│   │── app/
+│   │   │── about/
+│   │   │   └── page.tsx
+│   │   │── contact/
+│   │   │   └── page.tsx
+│   │   │── farming/
+│   │   │   └── page.tsx
+│   │   │── favicon.ico
+│   │   │── layout.tsx
+│   │   │── page.tsx
+│   │   └── products/
+│   │       └── page.tsx
+│   │── components/
+│   │   │── Footer.tsx
+│   │   │── Hero.tsx
+│   │   │── Navbar.tsx
+│   │   │── ProductCard.tsx
+│   │   └── Section.tsx
+│   │── constants/
+│   │   │── farming.ts
+│   │   └── products.ts
+│   └── styles/
+│       └── globals.css
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology Stack
+- **Framework:** Next.js (React-based framework for SSR & SSG)
+- **Styling:** CSS Modules for scoped styles
+- **TypeScript:** Ensures type safety and maintainability
+- **Hosting:** Vercel (Continuous Deployment with `main` for development and `prd` for production)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment Strategy
+- **`main` Branch** → Deployed on **Vercel preview** (`smas-gray.vercel.app`)
+- **`prd` Branch** → Deployed to **skandamarine.com** for real users
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation & Setup
+### Prerequisites
+- Node.js (>=16)
+- npm or yarn package manager
 
-## Learn More
+### Steps
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/your-repo/smas.git
+   cd smas
+   ```
+2. **Install Dependencies**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+3. **Run the Development Server**
+   ```sh
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Build and Run for Production**
+   ```sh
+   npm run build
+   npm run start
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contribution
+We welcome contributions! Feel free to fork the repo, create feature branches, and submit pull requests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
+📩 **Email:** skanda……@gmail.com  
+📞 **Phone:** +91 XXXXXXXXXX  
+🏢 **Office Location:** [Address Placeholder]  
+🌍 **Website:** [skandamarine.com](https://skandamarine.com)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This README provides a **clear theoretical and technical overview**, making it easy for both **developers and AI models** to understand the project's structure, purpose, and functionality.
