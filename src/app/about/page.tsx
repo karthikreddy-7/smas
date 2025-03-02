@@ -4,8 +4,7 @@ export default function About() {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center text-center px-4">
-        <div className="absolute inset-0 bg-[url('/seaweed-pattern.svg')] opacity-10 animate-float"></div>
+      <section className="relative min-h-[50vh] flex items-center justify-center text-center px-4">
         <div className="relative z-10 max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 mb-6 animate-fade-in-up">
             Cultivating Ocean Prosperity
@@ -34,21 +33,21 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 animate-fade-in-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in-left">
             <Image
-              src="/women-farmers.jpg"
+              src="/images/women-farmers.jpg"
               alt="Women Farmers"
               width={400}
               height={300}
-              className="rounded-xl shadow-lg h-48 object-cover"
+              className="rounded-xl shadow-lg w-full h-auto object-contain"
             />
 
             <Image
-              src="/seaweed-harvest.jpg"
+              src="/images/seaweed-harvest.jpg"
               alt="Seaweed Harvest"
               width={400}
               height={300}
-              className="rounded-xl shadow-lg h-48 object-cover mt-8"
+              className="rounded-xl shadow-lg w-full h-auto object-contain"
             />
           </div>
         </div>
@@ -96,11 +95,15 @@ export default function About() {
 
       {/* Impact Timeline */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-blue-900 mb-12">
-            Our Impact Journey
-          </h2>
-          <div className="relative border-l-4 border-teal-500 pl-8">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+          {/* Right: Big Heading */}
+          <div className="flex justify-center items-center">
+            <h2 className="text-6xl md:text-8xl font-bold text-blue-900">
+              Skanda Marine <br /> Solutions
+            </h2>
+          </div>
+          {/* Left: Timeline */}
+          <div className="border-l-4 border-teal-500 pl-8">
             {[
               {
                 year: "2025",
@@ -130,7 +133,6 @@ export default function About() {
               <div
                 key={index}
                 className="mb-12 relative pl-8 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="absolute w-4 h-4 bg-teal-500 rounded-full -left-[10px] top-2"></div>
                 <div className="text-2xl font-bold text-teal-600">

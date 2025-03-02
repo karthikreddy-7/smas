@@ -16,12 +16,11 @@ export default function Navbar() {
           className="flex items-center space-x-3 group"
           onClick={() => setIsMenuOpen(false)}
         >
-          <div className="p-2 bg-white rounded-full shadow-md transition-shadow group-hover:shadow-lg">
+          <div className="">
             <motion.img
-              src="/images/logo.png"
+              src="/logo.png"
               alt="SMAS Logo"
               className="h-10 w-10 transform group-hover:scale-110 transition-transform"
-              whileHover={{ rotate: 10 }}
             />
           </div>
           {/* Hide SMAS on Mobile */}
@@ -54,24 +53,24 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(true)}
-            className="md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
+        <button
+          onClick={() => setIsMenuOpen(true)}
+          className="md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
+        >
+          <svg
+            className="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              className="w-7 h-7"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
