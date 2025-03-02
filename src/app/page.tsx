@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-b from-teal-50 to-white">
       <Hero
-        title="Sustainable Seaweed Solutions"
+        title="Skanda Marine Algae Solutions"
         subtitle="Empowering coastal communities through innovative marine agriculture"
       />
 
