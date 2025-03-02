@@ -20,9 +20,9 @@ export default function Mission() {
         </div>
 
         {/* Image */}
-        <div className="animate-float">
+        <div className="">
           <Image
-            src="/seaweed-farm.jpg"
+            src="/images/seaweed-farm.jpg"
             alt="Sustainable Farming"
             width={500}
             height={350}

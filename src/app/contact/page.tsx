@@ -163,7 +163,6 @@ export default function Contact() {
         </div>
       </section>
 
-
       {/* Social Proof */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
@@ -172,35 +171,35 @@ export default function Contact() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             <Image
-              src="/india-gov-logo.svg"
+              src="/india-gov-logo.png"
               alt="Govt of India"
               width={100}
-              height={50}
+              height={70}
               className="h-12 mx-auto opacity-75"
             />
 
             <Image
-              src="/marine-council-logo.svg"
+              src="/marine-council-logo.png"
               alt="Marine Council"
-              width={120}
-              height={60}
-              className="h-16 mx-auto opacity-75"
+              width={150}
+              height={70}
+              className="h-18 mx-auto opacity-75"
             />
 
             <Image
-              src="/organic-certified-logo.svg"
+              src="/organic-logo.png"
               alt="Organic Certified"
-              width={110}
-              height={55}
-              className="h-14 mx-auto opacity-75"
+              width={130}
+              height={100}
+              className="h-24 mx-auto opacity-75"
             />
 
             <Image
-              src="/women-empowerment-logo.svg"
+              src="/women-empowerment-logo.png"
               alt="Women Empowerment"
               width={100}
               height={50}
-              className="h-12 mx-auto opacity-75"
+              className="h-16 mx-auto opacity-75"
             />
           </div>
         </div>
