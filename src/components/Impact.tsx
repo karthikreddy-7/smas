@@ -1,5 +1,7 @@
 export default function Impact() {
-    return (
+  return (
+    <>
+      {/* 
       <section className="py-20 bg-blue-900  text-white">
         <div className="container min-h-72 mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">
@@ -25,5 +27,7 @@ export default function Impact() {
           </div>
         </div>
       </section>
-    );
-  }
+*/}
+    </>
+  );
+}
