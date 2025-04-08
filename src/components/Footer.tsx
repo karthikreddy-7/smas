@@ -45,13 +45,13 @@ export default function Footer() {
           <div className="space-y-2">
             <h4 className="text-lg font-semibold text-teal-300 mb-3">Connect</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Ramanathapuram District</p>
-              <p>Tamil Nadu, India 623501</p>
+              <p>Kavali District</p>
+              <p>Andhra Pradesh, India 524201</p>
               <a href="mailto:contact@skandamarine.com" className="block hover:text-teal-400">
-                contact@skandamarine.com
+              skandamarine@gmail.com
               </a>
               <a href="tel:+914422556677" className="block hover:text-teal-400">
-                +91 44 2255 6677
+                +91 90002 46048
               </a>
             </div>
           </div>

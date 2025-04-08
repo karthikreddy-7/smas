@@ -62,7 +62,7 @@ export default function Contact() {
                         href="tel:+914422556677"
                         className="text-gray-600 hover:text-teal-600 transition"
                       >
-                        +91 44 2255 6677
+                        +91 90002 46048
                       </a>
                     </div>
                   </div>
@@ -78,9 +78,9 @@ export default function Contact() {
                       <p className="text-gray-600">
                         Marine Algae Research Center
                         <br />
-                        Ramanathapuram District
+                        Kavali District
                         <br />
-                        Tamil Nadu, India 623501
+                        Andhra Pradesh, India 524201
                       </p>
                     </div>
                   </div>

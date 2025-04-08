@@ -111,6 +111,7 @@ export default function About() {
                 content:
                   "Established in Tamil Nadu with first 50 farming families",
               },
+              /*
               {
                 year: "2027",
                 title: "Tech Integration",
@@ -129,6 +130,7 @@ export default function About() {
                 content:
                   "Launched international operations across 5 coastal nations",
               },
+              */
             ].map((milestone, index) => (
               <div
                 key={index}
