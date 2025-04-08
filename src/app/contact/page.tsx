@@ -76,7 +76,6 @@ export default function Contact() {
                         Headquarters
                       </h3>
                       <p className="text-gray-600">
-                        Marine Algae Research Center
                         <br />
                         Kavali, Nellore District
                         <br />
