@@ -42,10 +42,10 @@ export default function Contact() {
                         General Inquiries
                       </h3>
                       <a
-                        href="mailto:contact@skandamarine.com"
+                        href="mailto:skandamarine@gmail.com"
                         className="text-gray-600 hover:text-teal-600 transition"
                       >
-                        contact@skandamarine.com
+                        skandamarine@gmail.com
                       </a>
                     </div>
                   </div>
@@ -76,9 +76,8 @@ export default function Contact() {
                         Headquarters
                       </h3>
                       <p className="text-gray-600">
-                        Marine Algae Research Center
                         <br />
-                        Kavali District
+                        Kavali, Nellore District
                         <br />
                         Andhra Pradesh, India 524201
                       </p>
