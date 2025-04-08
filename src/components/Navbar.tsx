@@ -20,7 +20,7 @@ export default function Navbar() {
             <motion.img
               src="/logo.png"
               alt="SMAS Logo"
-              className="h-10 w-10 transform group-hover:scale-110 transition-transform"
+              className="h-14 w-14 transform group-hover:scale-110 transition-transform"
             />
           </div>
           {/* Hide SMAS on Mobile */}
